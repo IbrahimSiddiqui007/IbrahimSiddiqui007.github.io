@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="CVStyle.xsl"?>
+
+<CV>
+    <personal>
+        <Name>Ibrum Siddiqui</Name>
+        <about>Hi i'm a student currently studying in UOWD</about>
+    </personal>
+    <Education>
+        <history>I started off my education in the UAE, where I studied for the first 9 years, after which I moved to South Africa. I studied there for the next four years in a suburb called dolphin coast outside the city of Durban. I finished my final 2 years of school in UAE as we moved back here in 2020. I joined UOWD at the end of 2021.</history>
+        <primary>Al Nahda, The International School of Choueifat</primary>
+        <secondary>The International School of Choueifat, Crawford College North Coast</secondary>
+        <university>University of Wollongong in Dubai</university>
+        <curriculum>American, SABIS, IEB and finally IB</curriculum>
+    </Education>
+    <Contact>
+        <Email>Ibrahim2003march@gmail.com</Email>
+        <Phone_Number>0503039378</Phone_Number>
+    </Contact>
+    <Experience>
+        <title></title>
+        <date></date>
+        <description></description>
+    </Experience>
+    <Experience>
+        <title></title>
+        <date></date>
+        <description></description>
+    </Experience>
+    <Experience>
+        <title></title>
+        <date></date>
+        <description></description>
+    </Experience>
+    <Hobbies>
+        <skills></skills>
+    </Hobbies>
+    
+</CV>

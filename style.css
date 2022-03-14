@@ -105,7 +105,7 @@ body{
 }
 
 .Bout{
-    padding-top: 300px;
+    padding-top: 100px;
     padding-left: 50px;
     color: white;
 
@@ -116,7 +116,6 @@ body{
     padding-left: 50px;
     color: white;
 }
-
 
 section .title{
     position: relative;
@@ -177,10 +176,10 @@ section .title::after{
 }
 
 .Bout .AContent .CRight img{
-    width: 700px;
-    height: 700px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
-    margin: 0 200px;
+    margin: 0 100px;
 }
 
 .Bout .AContent .Cleft{
@@ -458,4 +457,4 @@ color: #141414;
 
 #map {
     height: 100%;
-  }
+}

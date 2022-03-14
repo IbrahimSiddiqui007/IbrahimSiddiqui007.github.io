@@ -49,3 +49,51 @@ function validateForm(){
         alert("Success ur message was sent")
     }
 }
+
+function loadDoc(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
+            processXML(xhttp);
+          }
+        };
+        xhttp.open("GET", "CV2.xml", true);
+        xhttp.send();
+}
+
+function processXML(xhttp) {
+var xml = xhttp.responseXML; 
+var arr = parseXML(xml); 
+display(arr); 
+}
+
+function parseXML(xml) {
+var elements = xml.getElementsByTagName("Experience"); 
+var arr = [];
+
+for (var i = 0; i < elements.length; i++) { 
+    var exp = {}; 
+
+    exp.name = elements[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+    exp.date = elements[i].getElementsByTagName("date")[0].childNodes[0].nodeValue;
+    exp.description = elements[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+    arr.push(exp); 
+}
+return arr; 
+}
+
+function display(arr) {
+var html = "<ul style='list-style-type:none'>";
+
+    for (var i = 0; i < arr.length; i++) 
+    {
+    html += "<li style='padding-bottom:10px;color:#00eeff; font-size: 20px;'>" + arr[i].name +"</li>";
+    html += "<li style='padding-bottom:10px'>" + arr[i].date +"</li>";
+    html += "<li style='padding-bottom:10px'>" + arr[i].description +"</li>";
+    }
+
+html += "</ul>";
+
+var div = document.getElementById("rest_of_CV");
+div.innerHTML = html;
+}

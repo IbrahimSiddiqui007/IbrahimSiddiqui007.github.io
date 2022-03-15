@@ -5,7 +5,7 @@ body{
     font-family: 'Roboto Mono', monospace;
 }
 
-*{
+*,*::after, *::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -60,6 +60,7 @@ body{
     justify-content: space-between;
     
 }
+
 
 .HPage{
     display: flex;
@@ -383,7 +384,7 @@ backface-visibility: hidden;
 }
 
 .h{
-    font-size: 35px;
+    font-size: 20px;
     padding-top: 10px;
 } 
 
@@ -400,19 +401,17 @@ transform: rotateY(180deg);
 
 .td1{
 padding-top: 100px;
-padding-left: px;
 }
 
 .Text{
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 5px;
     text-align: justify;
 }
 
 .td2{
         padding-top: 100px;
-        padding-left: 100px;
+        padding-left: 50px;
 }
 
 .img1{

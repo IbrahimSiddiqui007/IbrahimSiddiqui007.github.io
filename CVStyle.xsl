@@ -4,11 +4,11 @@
             <html>
                 <head>
                     <title>Ibrahims Portfolio</title>
-                    <link rel="stylesheet" type="text/css" href="http://localhost/CSIT128Project/style.css"/>
+                    <link rel="stylesheet" type="text/css" href="http://localhost:8080/CSIT128Project/style.css"/>
                     <script  src="https://use.fontawesome.com/releases/v5.15.0/js/all.js"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
                     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-                    <script src="http://localhost/CSIT128Project/script.js"></script>
+                    <script src="http://localhost:8080/CSIT128Project/script.js"></script>
                 </head>
                 <body>
                 <nav class="Nbar">
@@ -20,6 +20,7 @@
                             <li><a href="Skills.html">Skills</a></li>
                             <li><a href="Hobbies.html">Hobbies</a></li>
                             <li><a href="CV.xml">CV</a></li>
+                            <li><a href="Game.html">Game</a></li>
                             <li><a href="ContactMe.html">Contact</a></li>
                         </ul>
                         <div class="Mbtn">

@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.Nbar {
+  margin-top: -40px;
+  position: fixed;
+  width: 100%;
+  font-family: 'Roboto Mono', monospace;
+  padding: 30px 0px; 
+}
+
+
+.Nbar .navmenu li a{
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.5s ease-in;
+
+}
+
+.Nbar .navmenu li a:hover{
+  color: #00eeff;
+}
+
+.Nbar .navmenu li{
+  list-style: none;
+  display: inline-block;
+}
+
+.Nbar .logo a{
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.Nbar .logo a .blue{
+  color:#00eeff;
+  transition: all 0.32s ease-in;
+}
+
+.Mwidth{
+  max-width: 2560px;
+  padding: 0 60px;
+  margin: auto;
+}
+
+.Nbar .Mwidth{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.HPage{
+  display: flex;
+  background: #1f1f1f;
+  background-size: cover;
+  height: 100vh;
+  color: #ffffff;
+  min-height: 500px;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  align-items: center;
+}
+
+.HPage .Mwidth{
+  margin: auto 0 auto 25%;
+  margin-top: 175px;
+}
+
+
+body {
+  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1em;
+  font-size: clamp(.5rem, 2.5vmin, 1.5rem);
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(20, minmax(auto, 1.25em));
+  grid-auto-rows: 3em;
+  gap: .25em;
+  justify-content: center;
+}
+
+.key {
+  font-size: inherit;
+  grid-column: span 2;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(
+    var(--hue, 200),
+    var(--saturation, 1%),
+    calc(var(--lightness-offset, 0%) + var(--lightness, 51%))
+  );
+  color: white;
+  fill: white;
+  text-transform: uppercase;
+  border-radius: .25em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.key.large {
+  grid-column: span 3;
+}
+
+.key > svg {
+  width: 1.75em;
+  height: 1.75em;
+}
+
+.key:hover, .key:focus {
+  --lightness-offset: 10%;
+}
+
+.key.wrong {
+  --lightness: 23%;
+}
+
+.key.wrong-location {
+  --hue: 49;
+  --saturation: 51%;
+  --lightness: 47%;
+}
+
+.key.correct {
+  --hue: 115;
+  --saturation: 29%;
+  --lightness: 43%;
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  flex-grow: 1;
+  grid-template-columns: repeat(5, 4em);
+  grid-template-rows: repeat(6, 4em);
+  gap: .25em;
+  margin-bottom: 1em;
+}
+
+.BOX {
+  font-size: 2em;
+  color: white;
+  border: .05em solid hsl(240, 2%, 23%);
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  transition: transform 250ms linear;
+}
+
+.BOX[data-state="active"] {
+  border-color: hsl(200, 1%, 34%);
+}
+
+.BOX[data-state="wrong"] {
+  border: none;
+  background-color: hsl(240, 2%, 23%);
+}
+
+.BOX[data-state="wrong-location"] {
+  border: none;
+  background-color: hsl(49, 51%, 47%);
+}
+
+.BOX[data-state="correct"] {
+  border: none;
+  background-color: hsl(115, 29%, 43%);
+}
+
+.BOX.shake {
+  animation: shake 250ms ease-in-out;
+}
+
+.BOX.dance {
+  animation: dance 500ms ease-in-out;
+}
+
+.BOX.flip {
+  transform: rotateX(90deg);
+}
+
+@keyframes shake {
+  10% {
+    transform: translateX(-5%);
+  }
+
+  30% {
+    transform: translateX(5%);
+  }
+
+  50% {
+    transform: translateX(-7.5%);
+  }
+
+  70% {
+    transform: translateX(7.5%);
+  }
+
+  90% {
+    transform: translateX(-5%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes dance {
+  20% {
+    transform: translateY(-50%);
+  }  
+
+  40% {
+    transform: translateY(5%);
+  }  
+
+  60% {
+    transform: translateY(-25%);
+  }  
+
+  80% {
+    transform: translateY(2.5%);
+  }  
+
+  90% {
+    transform: translateY(-5%);
+  }  
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.alert-container {
+  position: fixed;
+  top: 10vh;
+  left: 50vw;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alert {
+  pointer-events: none;
+  background-color: hsl(204, 7%, 85%);
+  padding: .75em;
+  border-radius: .25em;
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+  margin-bottom: .5em;
+}
+
+.alert:last-child {
+  margin-bottom: 0;
+}
+
+.alert.hide {
+  opacity: 0;
+}

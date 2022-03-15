@@ -21,14 +21,21 @@ $(document).ready(function()
 
 
 function validateForm(){
-    if (document.getElementById("FName").value === "" || !(document.getElementById("LName").value).match(/^[0-9]+$/)) {
+    if (document.getElementById("FName").value == null) {
         alert("The First Name Cannot Be empty")
     }
+    else if (/^[a-zA-Z ,.'-]+$/.test(document.getElementById("FName").value))
+    {
+        alert("The First Name is InValid ")
+    }
         
-    if (document.getElementById("LName").value === "" || !(document.getElementById("LName").value).match(/^[0-9]+$/)) {
+    if (document.getElementById("LName").value == null ) {
         alert("The Last Name Cannot Be empty")
     }
-
+    else if(/^[a-zA-Z ,.'-]+$/.test(document.getElementById("LName").value))
+    {
+        alert("The Last Name is InValid")
+    }
     if (!(document.getElementById("Email").value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)))
     {
         alert("You have entered an invalid email address!")
@@ -57,7 +64,7 @@ function loadDoc(){
             processXML(xhttp);
           }
         };
-        xhttp.open("GET", "CV2.xml", true);
+        xhttp.open("GET", "http://localhost:8080/CSIT128Project/CV2.xml", true);
         xhttp.send();
 }
 

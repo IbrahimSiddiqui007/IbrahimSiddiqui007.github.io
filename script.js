@@ -24,24 +24,30 @@ function validateForm(){
     if (document.getElementById("FName").value == null) {
         alert("The First Name Cannot Be empty")
     }
-    else if (/^[a-zA-Z ,.'-]+$/.test(document.getElementById("FName").value))
+    else if (!(/^[a-zA-Z ,.'-]+$/.test(document.getElementById("FName").value)))
     {
         alert("The First Name is InValid ")
     }
         
-    if (document.getElementById("LName").value == null ) {
+    if (document.getElementById("LName").value == null ) 
+    {
         alert("The Last Name Cannot Be empty")
     }
     else if(/^[a-zA-Z ,.'-]+$/.test(document.getElementById("LName").value))
     {
         alert("The Last Name is InValid")
     }
-    if (!(document.getElementById("Email").value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)))
+
+    if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("Email").value)))
     {
         alert("You have entered an invalid email address!")
     }
+    else if(document.getElementById("Email").value == null)
+    {
+        alert("You have not entered an email address!")
+    }
     
-    if (document.getElementById("CCountry").value === "")
+    if (document.getElementById("CCountry").value == null)
     {
         alert("Please Select a Country")
     }
